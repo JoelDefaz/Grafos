@@ -1,2 +1,2 @@
-# EDA-Grafos
-Repositorio para realizar las implemtaciones para la Estructura de Dato tipo Grafo
+# Grafos
+Repositorio para realizar las implementaciones para la Estructura de Dato tipo Grafo
