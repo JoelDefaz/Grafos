@@ -4,7 +4,6 @@ from GrafoMatriz import GrafoMatriz
 
 if __name__ == '__main__':
     grafo = GrafoMatriz(7)
-    #grafo = GrafoLista(7)
 
     grafo.crear_nuevo_vertice("A")
     grafo.crear_nuevo_vertice("B")
@@ -25,5 +24,5 @@ if __name__ == '__main__':
 
     grafo.imprimir_grafo()
 
-    print("Recorrido en Anchura")
-    RecorrerGrafo().recorrer_anchura(grafo,"D")
+    print("Recorrido en Profundidad")
+    RecorrerGrafo().recorrer_profundidad(grafo,"D")

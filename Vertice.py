@@ -4,6 +4,7 @@ class Vertice:
         self.nombre = nombre                #Nombre del Vertice
         self.numero_vertice = -1            #Numero del  vertice
         self.lista_de_adyacencia = list()   #Lista de adyacencia(si aplica)
+        self.visitado = False
 
     # Método que compara los nombres del vertice actual con el nombre del vertice de parametro
     def es_igual(self, vertice):

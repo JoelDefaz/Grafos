@@ -21,4 +21,15 @@ class RecorrerGrafo:
                         m[u] = m[w] + 1                                             # Cambia el estado del vertice a visitado
                         cola.put(u)                                                 # Ingresa el numero del vertice siguiente en la cola
         return m
-    
+
+    # Funcion recursiva que recorre el grafo en profundidad con ayuda de la matriz de adyacencia
+    def recorrer_profundidad(self,grafo,nombre_vertice):
+        vertice_inicial = grafo.get_numero_del_vertice(nombre_vertice)          # Vertice donde inicia el recorrido
+        grafo.vertices[vertice_inicial].visitado = True                         # Marca el 1er vertice como visitado
+        print(f"Vertice {grafo.vertices[vertice_inicial].nombre} => Visitado")  # Imprime los vertices que va visitando
+        # Ciclo que va recorrienndo todos los vertices adyacentes del vertice actual
+        for i in range (0, grafo.numero_de_vertices):
+            # Si el vertice actual tiene un vertice adyacente (1era condición) y el vertice aun no es visitado(2da condición)
+            # Entonces el metodo se llamara de forma recursiva con el mismo grafo y con el vertice adyacente como parametro
+            if (not grafo.matriz_adyacencia[vertice_inicial][i] == 0) and (not grafo.vertices[i].visitado):
+                self.recorrer_profundidad(grafo,grafo.vertices[i].nombre)
